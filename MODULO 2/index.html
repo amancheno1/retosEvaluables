@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Página Web</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('galeria')">Galería</a>
+    <a href="#" onclick="showPage('blog')">Blog</a>
+  </nav>
+
+  <div id="home" class="page active">
+    <h1>Bienvenido a Travel Mania</h1>
+    <div class="home-content">
+      <div class="text-blocks">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui soluta, animi ad rerum ut asperiores provident,
+          sint expedita nam, cum repellat quidem voluptates officia odio voluptatum! Velit dicta harum porro.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ea quia cumque sit sapiente consectetur
+          dolorem sequi amet unde, soluta, nisi nam omnis quaerat ipsum! Dicta magnam quidem blanditiis magni.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique beatae nemo minima ipsam labore tempora
+          veniam voluptatum distinctio quas itaque sint cum, sunt, a numquam voluptatem sapiente obcaecati tenetur
+          dolores.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis iste pariatur impedit amet soluta
+          ratione ipsam eligendi culpa magnam, obcaecati temporibus totam laborum quae, tenetur praesentium minima,
+          voluptates quo incidunt!</p>
+      </div>
+      <div class="home-image">
+        <img src="TEMA 1/IMAGENES/home2.jpg" alt="Imagen Home">
+      </div>
+    </div>
+  </div>
+
+  <div id="galeria" class="page">
+    <h1></h1>
+    <div class="gallery">
+      <img src="TEMA 1/IMAGENES/galeriabosque2.jpg" alt="Galería 1">
+      <img src="TEMA 1/IMAGENES/galeriacielo.jpg" alt="Galería 2">
+      <img src="TEMA 1/IMAGENES/galeriaflor.jpg" alt="Galería 3">
+      <img src="TEMA 1/IMAGENES/galeriaelefante.jpg" alt="Galería 4">
+      <img src="TEMA 1/IMAGENES/galeriallamas.jpg" alt="Galería 5">
+      <img src="TEMA 1/IMAGENES/galeriaagua.jpg" alt="Galería 6">
+    </div>
+  </div>
+
+  <div id="blog" class="page">
+    <h1>Un Viaje inesperado</h1>
+    <div class="blog-content">
+      <div class="blog-image">
+        <img src="TEMA 1/IMAGENES/blog.jpg" alt="Imagen Blog">
+      </div>
+      <div class="blog-text">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum ea nulla vero perspiciatis, nobis maiores
+          atque? Iste nisi totam consequuntur, laboriosam saepe quaerat quam. Odio cupiditate quia dignissimos iste.
+          Corrupti.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sequi cum sapiente, magnam harum voluptatum
+          officia ducimus iste modi, nam minima repellat, fuga est quasi tempora molestias? Soluta, quae maiores.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti aperiam quibusdam recusandae iste vel
+          laborum odio repudiandae, alias officiis magnam quis numquam eveniet in laudantium commodi quos? Nemo,
+          praesentium enim!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex exercitationem minus a unde maxime ut laborum
+          hic quam corporis, repellat animi ipsa modi rem delectus corrupti reiciendis tempore. Molestiae, accusamus?
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis esse a, officia velit cumque, eius
+          voluptatem aliquid quaerat repellendus blanditiis temporibus atque dolor doloribus facilis eaque recusandae
+          placeat explicabo quas.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showPage(id) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+
+</html>
