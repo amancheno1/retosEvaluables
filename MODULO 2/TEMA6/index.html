@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tienda de Ropa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="img/nash!.png" alt="Logo nash" width="40" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Novedades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Categorías</a>
+          </li>
+        </ul>
+        <button class="btn bg-secondary text-white" data-bs-toggle="modal" data-bs-target="#carritoModal">
+          Ver Carrito <span class="badge bg-light text-dark" id="contadorCarrito">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-4">
+    <div class="row" id="productos">
+    </div>
+  </div>
+
+  <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="carritoModalLabel">Carrito de Compras</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div id="bodyCarrito">
+            <ul class="list-group" id="listaCarrito"></ul>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <strong>Total: $<span id="totalCarrito">0.00</span></strong>
+          <button class="btn btn-success" id="checkoutBtn">Proceder al Pago</button>
+          <button class="btn btn-secondary d-none" id="backBtn">Volver al Carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
