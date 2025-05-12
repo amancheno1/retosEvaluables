@@ -6,7 +6,11 @@ const productos = [
     { nombre: 'Pantalón ancho', precio: 44.99, imagen: 'img/pantalon_ancho.png' },
     { nombre: 'Pantalón talle alto', precio: 39.50, imagen: 'img/pantalones_tallealto.png' },
     { nombre: 'Vestido jersey', precio: 32.00, imagen: 'img/vestido_jersey.png' },
+<<<<<<< HEAD
     { nombre: 'Vestido túnico', precio: 36.75, imagen: 'img/vestido_tunico.png' },
+=======
+    { nombre: 'Vestido túnico', precio: 36.75, imagen: 'img/vestido_tunico.png' }
+>>>>>>> modulo2
   ];
   
   let carrito = [];
@@ -15,8 +19,12 @@ const productos = [
     const datos = localStorage.getItem('carrito');
     carrito = datos ? JSON.parse(datos) : [];
   }
+<<<<<<< HEAD
 
 
+=======
+  
+>>>>>>> modulo2
   function saveCart() {
     localStorage.setItem('carrito', JSON.stringify(carrito));
   }
@@ -41,7 +49,11 @@ const productos = [
       `);
     });
   }
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> modulo2
   function actualizarCarritoView() {
     const lista = $('#listaCarrito');
     lista.empty();
@@ -70,7 +82,11 @@ const productos = [
       let html = '<h5>Resumen de tu pedido:</h5><ul class="list-group mb-3">';
       carrito.forEach(it => {
         html += `<li class="list-group-item">
+<<<<<<< HEAD
           ${it.nombre} — €${it.precio.toFixed(2)}
+=======
+          ${it.nombre} — $${it.precio.toFixed(2)}
+>>>>>>> modulo2
         </li>`;
       });
       html += '</ul>';
@@ -81,6 +97,10 @@ const productos = [
     $('#checkoutBtn').addClass('d-none');
     $('#backBtn').removeClass('d-none');
   }
+<<<<<<< HEAD
+=======
+  
+>>>>>>> modulo2
   function backToCart() {
     $('#bodyCarrito').html('<ul class="list-group" id="listaCarrito"></ul>');
     actualizarCarritoView();
@@ -92,7 +112,11 @@ const productos = [
     loadCart();
     renderProductos();
     actualizarCarritoView();
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> modulo2
     $(document).on('click', '.agregarCarrito', function() {
       const idx = $(this).data('index');
       carrito.push(productos[idx]);
@@ -110,13 +134,24 @@ const productos = [
     $('#checkoutBtn').click(function() {
       showSummary();
     });
+<<<<<<< HEAD
 
     $('#backBtn').click(function() {
       backToCart();
     });
   
+=======
+  
+    $('#backBtn').click(function() {
+      backToCart();
+    });
+>>>>>>> modulo2
     $('#carritoModal').on('shown.bs.modal', function () {
       backToCart();
     });
   });
+<<<<<<< HEAD
   
+=======
+  
+>>>>>>> modulo2
