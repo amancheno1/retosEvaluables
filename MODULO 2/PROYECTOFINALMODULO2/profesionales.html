@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Profesionales - Rey Cine</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Rey Cine</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="peliculas.html">Películas</a>
+      <a href="profesionales.html">Profesionales</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Profesionales</h1>
+    <div class="profesionales-grid"></div>
+  </main>
+  <footer>
+    <p>Síguenos en redes:</p>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-x-twitter"></i></a>
+  </footer>
+  <script src="classes.js"></script>
+  <script>
+    window.onload = function () {
+      const grid = document.querySelector('.profesionales-grid');
+      if (grid) {
+        profesionales.forEach((prof, i) => {
+          const card = document.createElement('div');
+          card.className = 'profesional-card';
+          card.innerHTML = `
+            <div class="prof-img">
+              <img src="img/p${i+1}.jpg" alt="${prof.name}">
+            </div>
+            <div class="prof-info">
+              <h2>${prof.name}</h2>
+              <div><i class="fa-solid fa-cake-candles"></i> <strong>Edad:</strong> ${prof.age} años</div>
+              <div><i class="fa-solid fa-weight-hanging"></i> <strong>Peso:</strong> ${prof.weight} kg</div>
+              <div><i class="fa-solid fa-ruler-vertical"></i> <strong>Altura:</strong> ${prof.height} cm</div>
+              <div><i class="fa-solid fa-user-clock"></i> <strong>Retirado:</strong> ${prof.isRetired ? 'Sí' : 'No'}</div>
+              <div><i class="fa-solid fa-flag"></i> <strong>Nacionalidad:</strong> ${prof.nationality}</div>
+              <div><i class="fa-solid fa-trophy"></i> <strong>Oscars:</strong> ${prof.oscarNumbers}</div>
+              <div><i class="fa-solid fa-user-tie"></i> <strong>Profesión:</strong> ${prof.profession}</div>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      }
+    }
+  </script>
+</body>
+</html>
