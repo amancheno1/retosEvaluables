@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Películas - Rey Cine</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Rey Cine</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="peliculas.html">Películas</a>
+      <a href="profesionales.html">Profesionales</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Películas</h1>
+    <div class="peliculas-detalle"></div>
+  </main>
+<section class="form-section">
+    <h2>Añadir Nueva Película</h2>
+    <form id="movieForm">
+      <input type="text" id="title" placeholder="Título" required />
+      <input type="number" id="year" placeholder="Año de estreno" required />
+      <input type="text" id="actors" placeholder="Actores (separados por coma)" required />
+      <input type="text" id="nationality" placeholder="Nacionalidad" required />
+      <input type="text" id="director" placeholder="Director" required />
+      <input type="text" id="writer" placeholder="Guionista" required />
+      <input type="text" id="language" placeholder="Idioma" required />
+      <input type="text" id="platform" placeholder="Plataforma" required />
+      <input type="text" id="producer" placeholder="Productor" required />
+      <input type="text" id="genre" placeholder="Género" required />
+      <button type="submit">Agregar Película</button>
+    </form>
+  </section>
+
+  <section class="movie-list-section">
+    <h2>Películas Añadidas</h2>
+    <div id="movieList"></div>
+  </section>
+
+  <script src="script.js"></script>
+  <footer>
+    <p>Síguenos en redes:</p>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-x-twitter"></i></a>
+  </footer>
+  <script src="classes.js"></script>
+</body>
+</html>
